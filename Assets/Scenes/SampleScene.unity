@@ -123,6 +123,33 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &28484480 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fa59326b33d8d6b48a976027a89ddbae,
+    type: 3}
+  m_PrefabInstance: {fileID: 1826398341}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &28484482
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28484480}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: afe74095c63dbf148915920e0f019e1a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &85076499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -289,6 +316,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5273118cebc05b4aad498d6e3b44843, type: 3}
+--- !u!23 &203173989 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: e2500d7b9df50654cba54e6a2774ab55,
+    type: 3}
+  m_PrefabInstance: {fileID: 1403808093}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &307396162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -458,13 +491,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: -4}
+  m_LocalRotation: {x: 0.13052616, y: 0, z: 0, w: 0.9914449}
+  m_LocalPosition: {x: 0, y: 3, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 769290782}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1296,7 +1329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  jumpForce: 1000
+  jumpForce: 10
 --- !u!54 &769290784
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1385,6 +1418,7 @@ GameObject:
   - component: {fileID: 866701456}
   - component: {fileID: 866701455}
   - component: {fileID: 866701454}
+  - component: {fileID: 866701458}
   m_Layer: 0
   m_Name: pumpkin button
   m_TagString: Untagged
@@ -1478,6 +1512,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &866701458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866701453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218ae20ae8598b84bbd5fd7657c695ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetRenderer: {fileID: 203173989}
+  onColor: {r: 1, g: 1, b: 1, a: 1}
+  offColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1001 &893052829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1568,6 +1617,7 @@ GameObject:
   - component: {fileID: 917905881}
   - component: {fileID: 917905880}
   - component: {fileID: 917905879}
+  - component: {fileID: 917905883}
   m_Layer: 0
   m_Name: cauldron button
   m_TagString: Untagged
@@ -1661,6 +1711,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &917905883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917905878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae31125009df004d8632710f2675e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 1638705497}
 --- !u!1001 &1040362383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2068,6 +2131,7 @@ GameObject:
   - component: {fileID: 1476189809}
   - component: {fileID: 1476189808}
   - component: {fileID: 1476189807}
+  - component: {fileID: 1476189811}
   m_Layer: 0
   m_Name: ghostbutton
   m_TagString: Untagged
@@ -2161,6 +2225,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1476189811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476189806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bfcc47554796c24b9eacc7c6c9ee1b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 28484482}
+  animationTrigger: Activate
 --- !u!1001 &1505676045
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2249,6 +2327,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5273118cebc05b4aad498d6e3b44843, type: 3}
+--- !u!1 &1638705497 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ab0f1eebb859af4499f87c47261031b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 307396162}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1826398341
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2330,7 +2414,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fa59326b33d8d6b48a976027a89ddbae,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 28484482}
   m_SourcePrefab: {fileID: 100100000, guid: fa59326b33d8d6b48a976027a89ddbae, type: 3}
 --- !u!1001 &1915905258
 PrefabInstance:
